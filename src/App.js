@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import AnimatedCursor from "react-animated-cursor";
 
+
 function App() {
   return (
     <>

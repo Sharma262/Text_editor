@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import copy from 'copy-to-clipboard';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function TextForm(props) {
   const [text, setText] = useState("");
@@ -22,6 +24,14 @@ export default function TextForm(props) {
       let newText = text.charAt(0).toUpperCase()+(text.substring(1));
       setText(newText);
   };
+  const handleCopyToClipboard = () => {
+    if(text.length > 0){
+      copy(text)
+      toast.success('Copied to clipboard!')
+    }else{
+      toast.error('Empty message')
+    }
+  }
   return (
     <>
       <div className="container my-3">
@@ -62,6 +72,13 @@ export default function TextForm(props) {
           >
             First Char Cap
           </button>
+          <button
+            type="button"
+            className="btn btn-primary mx-1 my-2"
+            onClick={handleCopyToClipboard}
+          >
+            Copy to clipboard
+          </button>
         </div>
       </div>
       <div className="container my-3">
@@ -73,6 +90,7 @@ export default function TextForm(props) {
         <h1>{text.substring(1)}</h1>
         <h2>Preview</h2>
         <p>{text}</p>   
+        <Toaster />
       </div>
     </>
   );
