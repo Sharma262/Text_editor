@@ -15,7 +15,7 @@ A fun and interactive **React application** that allows users to convert text in
 - 🖱️ Animated custom cursor using `react-animated-cursor`
 - ✨ Responsive and clean UI
 - 🔁 Real-time updates as you type
-- 📋 Copy-to-clipboard functionality (-- comming soon)
+- 📋 Copy-to-clipboard functionality 
 - 🌙 Optional dark/light mode support (-- comming soon)
 
 ---
